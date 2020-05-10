@@ -2,95 +2,95 @@
 #include <iostream>
 #include<conio.h>
 #include<string>
-#define LEN sizeof(struct Addritem)//¶¨Òå½á¹¹ÌåµÄ³¤¶È//
+#define LEN sizeof(struct Addritem)//å®šä¹‰ç»“æ„ä½“çš„é•¿åº¦//
 using namespace std;
 
-//µ¥ÌõÍ¨Ñ¶Â¼ĞÅÏ¢½á¹¹Ìå
+//å•æ¡é€šè®¯å½•ä¿¡æ¯ç»“æ„ä½“
 struct Addritem
 {
-	//ĞÕÃû
+	//å§“å
 	char name[15];
-	//ÄêÁä
+	//å¹´é¾„
 	char age[10];
-	//ĞÔ±ğ
+	//æ€§åˆ«
 	char sex[10];
-	//µØÖ·
+	//åœ°å€
 	char address[30];
-	//ÁªÏµµç»°
+	//è”ç³»ç”µè¯
 	char tel[15];
 };
 
 Addritem *add=new Addritem[100];
 
 /***************
-º¯ÊıÃû£ºInsert
-¹¦ÄÜ£ºÏòÍ¨Ñ¶Â¼ÖĞÌí¼ÓÁªÏµÈËÊı¾İ
-ÊäÈë²ÎÊı£ºÎŞ
-·µ»Ø²ÎÊı£ºÎŞ
+å‡½æ•°åï¼šInsert
+åŠŸèƒ½ï¼šå‘é€šè®¯å½•ä¸­æ·»åŠ è”ç³»äººæ•°æ®
+è¾“å…¥å‚æ•°ï¼šæ— 
+è¿”å›å‚æ•°ï¼šæ— 
 ***************/
 void Insert();
 
 /***************
-º¯ÊıÃû£ºDelete
-¹¦ÄÜ£ºÏòÍ¨Ñ¶Â¼ÖĞÉ¾³ıÁªÏµÈËÊı¾İ
-ÊäÈë²ÎÊı£ºÎŞ
-·µ»Ø²ÎÊı£ºÎŞ
+å‡½æ•°åï¼šDelete
+åŠŸèƒ½ï¼šå‘é€šè®¯å½•ä¸­åˆ é™¤è”ç³»äººæ•°æ®
+è¾“å…¥å‚æ•°ï¼šæ— 
+è¿”å›å‚æ•°ï¼šæ— 
 ***************/
 void Delete();
 
 /***************
-º¯ÊıÃû£ºSearch
-¹¦ÄÜ£º²éÕÒÖ¸¶¨ÁªÏµÈËµÄ¼ÇÂ¼
-ÊäÈë²ÎÊı£ºÎŞ
-·µ»Ø²ÎÊı£ºÎŞ
+å‡½æ•°åï¼šSearch
+åŠŸèƒ½ï¼šæŸ¥æ‰¾æŒ‡å®šè”ç³»äººçš„è®°å½•
+è¾“å…¥å‚æ•°ï¼šæ— 
+è¿”å›å‚æ•°ï¼šæ— 
 ***************/
 void Search();
 
 /***************
-º¯ÊıÃû£ºModify
-¹¦ÄÜ£ºĞŞ¸ÄÖ¸¶¨ÁªÏµÈËµÄ¼ÇÂ¼
-ÊäÈë²ÎÊı£ºÎŞ
-·µ»Ø²ÎÊı£ºÎŞ
+å‡½æ•°åï¼šModify
+åŠŸèƒ½ï¼šä¿®æ”¹æŒ‡å®šè”ç³»äººçš„è®°å½•
+è¾“å…¥å‚æ•°ï¼šæ— 
+è¿”å›å‚æ•°ï¼šæ— 
 ***************/
 void Modify();
 
 /***************
-º¯ÊıÃû£ºShow
-¹¦ÄÜ£ºÏÔÊ¾Í¨Ñ¶Â¼ËùÓĞ¼ÇÂ¼
-ÊäÈë²ÎÊı£ºÎŞ
-·µ»Ø²ÎÊı£ºÎŞ
+å‡½æ•°åï¼šShow
+åŠŸèƒ½ï¼šæ˜¾ç¤ºé€šè®¯å½•æ‰€æœ‰è®°å½•
+è¾“å…¥å‚æ•°ï¼šæ— 
+è¿”å›å‚æ•°ï¼šæ— 
 ***************/
 void Show();
 
 /***************
-º¯ÊıÃû£ºEmpty
-¹¦ÄÜ£ºÇå¿ÕÍ¨Ñ¶Â¼¼ÇÂ¼
-ÊäÈë²ÎÊı£ºÎŞ
-·µ»Ø²ÎÊı£ºÎŞ
+å‡½æ•°åï¼šEmpty
+åŠŸèƒ½ï¼šæ¸…ç©ºé€šè®¯å½•è®°å½•
+è¾“å…¥å‚æ•°ï¼šæ— 
+è¿”å›å‚æ•°ï¼šæ— 
 ***************/
 void Empty();
 
 /***************
-º¯ÊıÃû£ºSort
-¹¦ÄÜ£º½«ÁªÏµÈËĞÕÃû°´ÕÕ×ÖÄ¸Ë³ĞòÅÅĞò
-ÊäÈë²ÎÊı£ºÎŞ
-·µ»Ø²ÎÊı£ºÎŞ
+å‡½æ•°åï¼šSort
+åŠŸèƒ½ï¼šå°†è”ç³»äººå§“åæŒ‰ç…§å­—æ¯é¡ºåºæ’åº
+è¾“å…¥å‚æ•°ï¼šæ— 
+è¿”å›å‚æ•°ï¼šæ— 
 ***************/
 void Sort();
 
 /***************
-º¯ÊıÃû£ºmeun
-¹¦ÄÜ£ºÊä³ö²Ëµ¥½çÃæ
-ÊäÈë²ÎÊı£ºÎŞ
-·µ»Ø²ÎÊı£ºÎŞ
+å‡½æ•°åï¼šmeun
+åŠŸèƒ½ï¼šè¾“å‡ºèœå•ç•Œé¢
+è¾“å…¥å‚æ•°ï¼šæ— 
+è¿”å›å‚æ•°ï¼šæ— 
 ***************/
 void menu();
 
 /***************
-º¯ÊıÃû£ºoperate
-¹¦ÄÜ£ºÖ´ĞĞÍ¨Ñ¶Â¼
-ÊäÈë²ÎÊı£ºÎŞ
-·µ»Ø²ÎÊı£ºÎŞ
+å‡½æ•°åï¼šoperate
+åŠŸèƒ½ï¼šæ‰§è¡Œé€šè®¯å½•
+è¾“å…¥å‚æ•°ï¼šæ— 
+è¿”å›å‚æ•°ï¼šæ— 
 ***************/
 void operate();
 
@@ -104,17 +104,17 @@ void menu()
 {
 	system("cls");
 	cout << endl << endl << endl << endl;
-	cout << "\t\t----------------------------------------Í¨Ñ¶Â¼-----------------------------------------------" << endl;
-	cout << "\t\t0. ÍË³ö                                                                                                                                 " << endl;;
-	cout << "\t\t1. Ìí¼ÓÁªÏµÈË                                                                                                                   " << endl;
-	cout << "\t\t2. É¾³ıÁªÏµÈË                                                                                                                  " << endl;
-	cout << "\t\t3. ĞŞ¸ÄÁªÏµÈË                                                                                                                  " << endl;
-	cout << "\t\t4. ²éÕÒÁªÏµÈË                                                                                                                  " << endl;
-	cout << "\t\t5. ÅÅĞò                                                                                                                                 " << endl;
-	cout << "\t\t6. ÏÔÊ¾Í¨Ñ¶Â¼                                                                                                                  " << endl;
-	cout << "\t\t7. Çå¿ÕÍ¨Ñ¶Â¼                                                                                                                  " << endl;
+	cout << "\t\t----------------------------------------é€šè®¯å½•-----------------------------------------------" << endl;
+	cout << "\t\t0. é€€å‡º                                                                                                                                 " << endl;;
+	cout << "\t\t1. æ·»åŠ è”ç³»äºº                                                                                                                   " << endl;
+	cout << "\t\t2. åˆ é™¤è”ç³»äºº                                                                                                                  " << endl;
+	cout << "\t\t3. ä¿®æ”¹è”ç³»äºº                                                                                                                  " << endl;
+	cout << "\t\t4. æŸ¥æ‰¾è”ç³»äºº                                                                                                                  " << endl;
+	cout << "\t\t5. æ’åº                                                                                                                                 " << endl;
+	cout << "\t\t6. æ˜¾ç¤ºé€šè®¯å½•                                                                                                                  " << endl;
+	cout << "\t\t7. æ¸…ç©ºé€šè®¯å½•                                                                                                                  " << endl;
 	cout << "\t\t---------------------------------------------------------------------------------------------" << endl;
-	cout << "ÊäÈë(0-7):";
+	cout << "è¾“å…¥(0-7):";
 }
 
 void operate()
@@ -138,7 +138,7 @@ void operate()
 		menu();
 		cin >> n;
 	}
-	cout << "»¶Ó­ÏÂ´ÎÊ¹ÓÃ£¡" << endl;
+	cout << "æ¬¢è¿ä¸‹æ¬¡ä½¿ç”¨ï¼" << endl;
 }
 
 void Insert()
@@ -147,7 +147,7 @@ void Insert()
 	FILE *fp;
 	if ((fp = fopen("data.txt", "a+")) == NULL)
 	{
-		cout << "ÎŞ·¨´ò¿ª£¡" << endl;
+		cout << "æ— æ³•æ‰“å¼€ï¼" << endl;
 		return;
 	}
 	while (!feof(fp))
@@ -159,7 +159,7 @@ void Insert()
 	if (count == 0)
 	{
 		system("cls");
-		cout << "Í¨Ñ¶Â¼Îª¿Õ£¡" << endl;
+		cout << "é€šè®¯å½•ä¸ºç©ºï¼" << endl;
 	}
 	else
 	{
@@ -168,30 +168,30 @@ void Insert()
 	}
 	if ((fp = fopen("data.txt", "wb")) == NULL)
 	{
-		cout << "ÎŞ·¨´ò¿ªÍ¨Ñ¶Â¼£¡" << endl;
+		cout << "æ— æ³•æ‰“å¼€é€šè®¯å½•ï¼" << endl;
 		return;
 	}
 	for (i = 0; i<count; i++)
 		fwrite(&add[i], LEN, 1, fp);
-	cout << "ÇëÊäÈëĞÕÃû£º" << endl;
+	cout << "è¯·è¾“å…¥å§“åï¼š" << endl;
 	cin >> add[count].name;
-	cout << "ÇëÊäÈëÄêÁä£º" << endl;
+	cout << "è¯·è¾“å…¥å¹´é¾„ï¼š" << endl;
 	cin >> add[count].age;
-	cout << "ÇëÊäÈëĞÔ±ğ£º" << endl;
+	cout << "è¯·è¾“å…¥æ€§åˆ«ï¼š" << endl;
 	cin >> add[count].sex;
-	cout << "ÇëÊäÈëµØÖ·£º" << endl;
+	cout << "è¯·è¾“å…¥åœ°å€ï¼š" << endl;
 	cin >> add[count].address;
-	cout << "ÇëÊäÈëµç»°£º" << endl;
+	cout << "è¯·è¾“å…¥ç”µè¯ï¼š" << endl;
 	cin >> add[count].tel;
 	if (fwrite(&add[count], LEN, 1, fp) != 1)
 	{
-		cout << "Ìí¼ÓÊ§°Ü£¡" << endl;
+		cout << "æ·»åŠ å¤±è´¥ï¼" << endl;
 		getch();
 	}
 	else
 	{
 		count++;
-		cout << "Ìí¼Ó³É¹¦£¡" << endl;
+		cout << "æ·»åŠ æˆåŠŸï¼" << endl;
 	}
 	fclose(fp);
 }
@@ -204,7 +204,7 @@ void Delete()
 	char name[15];
 	if ((fp = fopen("data.txt", "r+")) == NULL)
 	{
-		cout << "ÎŞ·¨´ò¿ª£¡" << endl;
+		cout << "æ— æ³•æ‰“å¼€ï¼" << endl;
 		return;
 	}
 	while (!feof(fp))
@@ -213,17 +213,17 @@ void Delete()
 	fclose(fp);
 	if (count == 0)
 	{
-		cout << "¼ÇÂ¼Îª¿Õ£¡" << endl;
+		cout << "è®°å½•ä¸ºç©ºï¼" << endl;
 		return;
 	}
 	Show();
-	cout << "ÇëÊäÈëÒªÉ¾³ıÁªÏµÈËµÄĞÕÃû£º";
+	cout << "è¯·è¾“å…¥è¦åˆ é™¤è”ç³»äººçš„å§“åï¼š";
 	cin >> name;
 	for (i = 0; i<count; i++)
 	{
 		if (strcmp(name, add[i].name) == 0)
 		{
-			cout << "¸ÃÁªÏµÈË´æÔÚ£¬ÊÇ·ñÉ¾³ı£¿(y/n)";
+			cout << "è¯¥è”ç³»äººå­˜åœ¨ï¼Œæ˜¯å¦åˆ é™¤ï¼Ÿ(y/n)";
 			cin >> ch;
 			if (ch == "Y" || ch == "y")
 			{
@@ -232,22 +232,22 @@ void Delete()
 				count--;
 				if ((fp = fopen("data.txt", "wb")) == NULL)
 				{
-					cout << "ÎŞ·¨´ò¿ª£¡" << endl;
+					cout << "æ— æ³•æ‰“å¼€ï¼" << endl;
 					return;
 				}
 				for (j = 0; j<count; j++)
 				if (fwrite(&add[j], LEN, 1, fp) != 1)
 				{
-					cout << "ÎŞ·¨±£´æ£¡" << endl;
+					cout << "æ— æ³•ä¿å­˜ï¼" << endl;
 					getch();
 				}
 				fclose(fp);
-				cout << "É¾³ı³É¹¦£¡" << endl;
+				cout << "åˆ é™¤æˆåŠŸï¼" << endl;
 			}
 			return;
 		}
 	}
-	cout << "²éÎŞ´ËÈË£¡" << endl;
+	cout << "æŸ¥æ— æ­¤äººï¼" << endl;
 }
 
 void Modify()
@@ -258,7 +258,7 @@ void Modify()
 	string ch;
 	if ((fp = fopen("data.txt", "r+")) == NULL)
 	{
-		cout << "ÎŞ·¨´ò¿ª£¡";
+		cout << "æ— æ³•æ‰“å¼€ï¼";
 		return;
 	}
 	while (!feof(fp))
@@ -266,41 +266,41 @@ void Modify()
 		count++;
 	if (count == 0)
 	{
-		cout << "¼ÇÂ¼Îª¿Õ£¡" << endl;
+		cout << "è®°å½•ä¸ºç©ºï¼" << endl;
 		fclose(fp);
 		return;
 	}
 	Show();
-	cout << "ÇëÊäÈëÄãËµÒªĞŞ¸ÄÁªÏµÈËµÄĞÕÃû£º";
+	cout << "è¯·è¾“å…¥ä½ è¯´è¦ä¿®æ”¹è”ç³»äººçš„å§“åï¼š";
 	cin >> name;
 	for (i = 0; i<count; i++)
 	{
 		if (strcmp(name, add[i].name) == 0)
 		{
-			cout << "¸ÃÁªÏµÈË´æÔÚ£¬ÊÇ·ñĞŞ¸Ä£¿(y/n)";
+			cout << "è¯¥è”ç³»äººå­˜åœ¨ï¼Œæ˜¯å¦ä¿®æ”¹ï¼Ÿ(y/n)";
 			cin >> ch;
 			if (ch == "Y" || ch == "y")
 			{
-				cout << "ÇëÊäÈëĞÂµÄĞÕÃû£º" << endl;
+				cout << "è¯·è¾“å…¥æ–°çš„å§“åï¼š" << endl;
 				cin >> add[i].name;
-				cout << "ÇëÊäÈëĞÂµÄÄêÁä£º" << endl;
+				cout << "è¯·è¾“å…¥æ–°çš„å¹´é¾„ï¼š" << endl;
 				cin >> add[i].age;
-				cout << "ÇëÊäÈëĞÂµÄĞÔ±ğ£º" << endl;
+				cout << "è¯·è¾“å…¥æ–°çš„æ€§åˆ«ï¼š" << endl;
 				cin >> add[i].sex;
-				cout << "ÇëÊäÈëĞÂµÄµØÖ·£º" << endl;
+				cout << "è¯·è¾“å…¥æ–°çš„åœ°å€ï¼š" << endl;
 				cin >> add[i].address;
-				cout << "ÇëÊäÈëĞÂµÄµç»°£º" << endl;
+				cout << "è¯·è¾“å…¥æ–°çš„ç”µè¯ï¼š" << endl;
 				cin >> add[i].tel;
-				cout << "ĞŞ¸Ä³É¹¦£¡" << endl;
+				cout << "ä¿®æ”¹æˆåŠŸï¼" << endl;
 				if ((fp = fopen("data.txt", "wb")) == NULL)
 				{
-					cout << "ÎŞ·¨´ò¿ª£¡" << endl;
+					cout << "æ— æ³•æ‰“å¼€ï¼" << endl;
 					return;
 				}
 				for (j = 0; j < count; j++)
 				if (fwrite(&add[j], LEN, 1, fp) != 1)
 				{
-					printf("±£´æÊ§°Ü!");
+					printf("ä¿å­˜å¤±è´¥!");
 					getch();
 				}
 				fclose(fp);
@@ -308,7 +308,7 @@ void Modify()
 			return;
 		}
 	}
-	cout << "²éÎŞ´ËÈË£¡" << endl;
+	cout << "æŸ¥æ— æ­¤äººï¼" << endl;
 }
 
 void Empty()
@@ -317,13 +317,13 @@ void Empty()
 	fp = fopen("data.txt", "w");
 	if (fp== NULL)
 	{
-		cout << "ÎŞ·¨´ò¿ª£¡";
+		cout << "æ— æ³•æ‰“å¼€ï¼";
 		return;
 	}
 	else
 	{
 		fclose(fp);
-		cout << "Çå¿ÕÍê³É£¡" << endl;
+		cout << "æ¸…ç©ºå®Œæˆï¼" << endl;
 	}
 }
 void Sort()
@@ -333,7 +333,7 @@ void Sort()
 	int i, j, count = 0;
 	if ((fp = fopen("data.txt", "r+")) == NULL)
 	{
-		cout << "ÎŞ·¨´ò¿ª£¡";
+		cout << "æ— æ³•æ‰“å¼€ï¼";
 		return;
 	}
 	while (!feof(fp))
@@ -341,7 +341,7 @@ void Sort()
 		count++;
 	if (count == 0)
 	{
-		cout << "¼ÇÂ¼Îª¿Õ£¡" << endl;
+		cout << "è®°å½•ä¸ºç©ºï¼" << endl;
 		fclose(fp);
 		return;
 	}
@@ -355,17 +355,17 @@ void Sort()
 	}
 	if ((fp = fopen("data.txt", "wb")) == NULL)
 	{
-		cout << "ÎŞ·¨´ò¿ª£¡" << endl;
+		cout << "æ— æ³•æ‰“å¼€ï¼" << endl;
 		return;
 	}
 	for (j = 0; j < count; j++)
 	if (fwrite(&add[j], LEN, 1, fp) != 1)
 	{
-		printf("±£´æÊ§°Ü!");
+		printf("ä¿å­˜å¤±è´¥!");
 		getch();
 	}
 	fclose(fp);
-	cout << "±£´æ³É¹¦£¡" << endl;
+	cout << "ä¿å­˜æˆåŠŸï¼" << endl;
 }
 
 void Show()
@@ -378,13 +378,13 @@ void Show()
 		if (fread(&add[count], LEN, 1, fp) == 1)
 			count++;
 	}
-	fclose(fp);//¹Ø±ÕÎÄ¼ş//
+	fclose(fp);//å…³é—­æ–‡ä»¶//
 	if (count == 0)
 	{
-		cout << "ÎŞ¼ÇÂ¼!" << endl;
+		cout << "æ— è®°å½•!" << endl;
 		return;
 	}
-	cout << "ĞÕÃû   " << "ÄêÁä" << "   ĞÔ±ğ" << "   µØÖ·" << "   µç»°" << endl;
+	cout << "å§“å   " << "å¹´é¾„" << "   æ€§åˆ«" << "   åœ°å€" << "   ç”µè¯" << endl;
 	for (i = 0; i < count; i++)
 		cout << add[i].name << "       " << add[i].age << "       " << add[i].sex << "       " << add[i].address << "       " << add[i].tel << endl;
 }
@@ -396,7 +396,7 @@ void Search()
 	char name[15];
 	if ((fp = fopen("data.txt", "rb")) == NULL)
 	{
-		cout << "ÎŞ·¨´ò¿ªÍ¨Ñ¶Â¼£¡" << endl;
+		cout << "æ— æ³•æ‰“å¼€é€šè®¯å½•ï¼" << endl;
 		return;
 	}
 	while (!feof(fp))
@@ -404,20 +404,20 @@ void Search()
 		count++;
 	if (count == 0)
 	{
-		cout << "ÎŞ¼ÇÂ¼£¡" << endl;
+		cout << "æ— è®°å½•ï¼" << endl;
 		return;
 	}
-	cout << "ÇëÊäÈëÒª²éÕÒµÄÁªÏµÈËĞÕÃû£º";
+	cout << "è¯·è¾“å…¥è¦æŸ¥æ‰¾çš„è”ç³»äººå§“åï¼š";
 	cin >> name;
 	for (i = 0; i<count; i++)
 	{
 		if (strcmp(name, add[i].name) == 0)
 		{
-			cout << "ĞÕÃû   " << "ÄêÁä" << "   ĞÔ±ğ" << "   µØÖ·" << "   µç»°" << endl;
+			cout << "å§“å   " << "å¹´é¾„" << "   æ€§åˆ«" << "   åœ°å€" << "   ç”µè¯" << endl;
 			cout << add[i].name << "       " << add[i].age << "       " << add[i].sex << "       " << add[i].address << "       " << add[i].tel << endl;
 			break;
 		}
 		if (i == count)
-			cout << "ÕÒ²»µ½¸ÃÁªÏµÈË£¡" << endl;
+			cout << "æ‰¾ä¸åˆ°è¯¥è”ç³»äººï¼" << endl;
 	}
 }
