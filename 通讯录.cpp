@@ -352,21 +352,51 @@ void Empty(Addritem add[], int &count)
 void Sort(Addritem add[], int &count)
 {
 	struct Addritem t;
-	int i, j;
+	int i, j,n;
 	if (count == 0)
 	{
 		cout << "记录为空！" << endl;
 		return;
 	}
+	system("cls");
 	cout << "原始顺序为：" << endl;
 	Show(add, count);
-	for (i = 0; i<count - 1; i++)
-	for (j = i + 1; j<count; j++)
-	if (strcmp(add[i].name, add[j].name)>0)
+	cout << "请选择你所要排列方式的数字，输入其他则退出：1.ID  2.姓名  3.年龄   ";
+	cin >> n;
+	switch (n)
 	{
-		t = add[i];
-		add[i] = add[j];
-		add[j] = t;
+	case 1:
+		for(i = 0; i<count - 1; i++)
+		   for (j = i + 1; j<count; j++)
+		      if (strcmp(add[i].ID, add[j].ID)>0)
+		    {
+			     t = add[i];
+			     add[i] = add[j];
+			     add[j] = t;
+		     }
+			  break;
+	case 2:
+		for (i = 0; i<count - 1; i++)
+		for (j = i + 1; j<count; j++)
+		if (strcmp(add[i].name, add[j].name)>0)
+		{
+			t = add[i];
+			add[i] = add[j];
+			add[j] = t;
+		}
+		break;
+	case 3:
+		for (i = 0; i<count - 1; i++)
+		for (j = i + 1; j<count; j++)
+		if (atoi(add[i].age)>atoi(add[j].age))
+		{
+			t = add[i];
+			add[i] = add[j];
+			add[j] = t;
+		}
+		break;
+	default:
+		return;
 	}
 	cout << "新的顺序为：" << endl;
 	Show(add, count);
